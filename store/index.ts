@@ -7,7 +7,7 @@ Vue.use(Vuex);
 const store: StoreOptions<RootState> = {
   state: {
     helloMessage: "hello from dick",
-    data: {}
+    data: []
   },
   actions: {
     async getProducts() {

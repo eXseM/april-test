@@ -1,4 +1,4 @@
 export interface RootState {
   helloMessage: string;
-  data: Object;
+  data: Array<Object>;
 }

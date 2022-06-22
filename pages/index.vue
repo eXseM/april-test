@@ -2,7 +2,6 @@
   <div>
     <h1>Catalog</h1>
     <Catalog />
-    {{ helloMessage }}
   </div>
 </template>
 
@@ -15,11 +14,6 @@ export default Vue.extend({
       msg: "hello",
     };
   },
-  computed: {
-    helloMessage() {
-      return this.$store.state.helloMessage
-    }
-  }
 });
 </script>
 
