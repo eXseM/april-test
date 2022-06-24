@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Catalog</h1>
-    <Catalog />
+    <Catalog @open-modal="openModal" />
+    <VModal ref="modal" />
   </div>
 </template>
 
@@ -13,6 +14,12 @@ export default Vue.extend({
     return {
       msg: "hello",
     };
+  },
+  methods: {
+    openModal(idx: number): void {
+      console.log(idx);
+      (this.$refs.modal as any).dialog = true;
+    },
   },
 });
 </script>

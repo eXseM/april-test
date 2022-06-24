@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <Cards />
+    <Cards @open-modal='openModal'/>
   </v-container>
 </template>
 
@@ -10,6 +10,11 @@ export default Vue.extend({
   name: "Catalog",
   created() {
     this.$store.dispatch('getProducts')
+  },
+  methods: {
+    openModal(idx: number): void{
+      this.$emit('open-modal', idx)
+    }
   }
 });
 </script>
